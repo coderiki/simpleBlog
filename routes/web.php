@@ -37,22 +37,11 @@ Route::group([
 
         Route::get('/login', 'AdminRouteController@routeLogin')->name('.login');
 
+        Route::get('/addCategory', 'AdminRouteController@routeAddCategory')->name('.addCategoryView');
+        Route::post('/addCategory', 'CategoryController@createCategory')->name('.addCategoryPost');
 
+        Route::get('/addPost', 'AdminRouteController@routeAddPost')->name('.addPostView');
+        Route::post('/addPost', 'PostController@createPost')->name('.addPostPost');
 
     }
 );
-
-
-
-Route::post('/salla', 'PostController@salla')->name('salla');
-
-Route::get("/deneme", function () {
-    return view("deneme");
-});
-
-
-
-
-
-
-Route::post("/deneme", "PostController@createPost")->name("deneme2");

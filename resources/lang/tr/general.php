@@ -11,14 +11,14 @@ return [
     */
 
     'readMore' => 'Daha fazla oku',
-    "author"    => "Yazar :",
-    "releaseDate" => "Yayın tarihi :",
+    "author"    => "Yazar",
+    "releaseDate" => "Yayın tarihi",
     "search" => "Arama",
     "searchText" => "Aranacak metin",
     "find" => "Bul",
     "categories" => "Kategoriler",
     "currentPosts" => "Güncel içerikler",
-    "LeaveAComment" => "Yorum yap :",
+    "LeaveAComment" => "Yorum yap",
     "submit" => "Gönder",
     "add" => "Ekle",
     "reset" => "Sıfırla",
@@ -33,7 +33,19 @@ return [
     'category' => 'Kategori',
     'post' => 'Makale',
     'list' => 'Listele',
-
+    'addCategory' => 'Kategori ekle',
+    'addPost' => 'Makale Ekle',
+    'listCategories' => 'Kategorileri listele',
+    'listPosts' => 'Makaleleri listele',
+    'title' => 'Başlık',
+    'explanation' => 'Açıklama',
+    'queue' => 'Sıra',
+    'parentCategory' => 'Üst kategori',
+    'mainCategory' => 'Ana kategori',
+    'content' => 'İçerik',
+    'tag' => 'Etiket',
+    'status' => 'Durum',
+    'image' => 'Görsel',
 
 
 ];

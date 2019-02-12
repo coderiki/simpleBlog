@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contracts\CategoryContract;
 use App\Contracts\PostContract;
 use App\Http\Requests\CategoryRequest;
+use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 use Illuminate\Http\Request;
 
 
@@ -25,9 +26,9 @@ class CategoryController extends Controller
 
     public function createCategory(CategoryRequest $request)
     {
-        $this->categoryContract->store($request->all());
+        $categorySave = $this->categoryContract->store($request->all());
 
-        echo "Kayıt işlemi başarılı.";
+        return redirect()->route('category', ['categorySlug' => $categorySave->slug]);
     }
 
     public function categoryPosts($categorySlug)

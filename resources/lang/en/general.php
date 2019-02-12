@@ -17,14 +17,14 @@ return [
     */
 
     'readMore' => 'Read More',
-    "author"    => "Author :",
-    "releaseDate" => "Release date :",
+    "author"    => "Author",
+    "releaseDate" => "Release date",
     "search" => "Search",
     "searchText" => "Search text",
     "find" => "Find",
     "categories" => "Categories",
     "currentPosts" => "Current posts",
-    "LeaveAComment" => "Leave a comment :",
+    "LeaveAComment" => "Leave a comment",
     "submit" => "Submit",
     "add" => "Add",
     "reset" => "Reset",
@@ -39,6 +39,19 @@ return [
     'category' => 'Category',
     'post' => 'Post',
     'list' => 'List',
+    'addCategory' => 'Add category',
+    'addPost' => 'Add post',
+    'listCategories' => 'List category',
+    'listPosts' => 'List post',
+    'title' => 'Title',
+    'explanation' => 'Explanation',
+    'queue' => 'Queue',
+    'parentCategory' => 'Parent category',
+    'maincategory' => 'Main category',
+    'content' => 'Content',
+    'tag' => 'Tag',
+    'status' => 'Status',
+    'image' => 'Image',
 
 
 ];

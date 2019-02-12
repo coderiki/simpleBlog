@@ -35,4 +35,14 @@ class AdminRouteController extends Controller
         }
     }
 
+    public function routeAddCategory()
+    {
+        return view('admin.addCategory');
+    }
+
+    public function routeAddPost()
+    {
+        return view('admin.addPost');
+    }
+
 }

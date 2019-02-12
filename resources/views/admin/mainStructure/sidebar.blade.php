@@ -12,7 +12,7 @@
             <span>{{ __('general.category') }}</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="login.html">{{ __('general.add') }}</a>
+            <a class="dropdown-item" href="{{ route('admin.addCategoryView') }}">{{ __('general.add') }}</a>
             <a class="dropdown-item" href="register.html">{{ __('general.list') }}</a>
         </div>
     </li>
@@ -23,7 +23,7 @@
             <span>{{ __('general.post') }}</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="login.html">{{ __('general.add') }}</a>
+            <a class="dropdown-item" href="{{ route('admin.addPostView') }}">{{ __('general.add') }}</a>
             <a class="dropdown-item" href="register.html">{{ __('general.list') }}</a>
         </div>
     </li>

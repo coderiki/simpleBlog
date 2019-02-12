@@ -31,7 +31,7 @@ class CategoryRequest extends FormRequest
             'title' => 'required|min:5|max:200',
             'explanation' => "required|min:5|max:255",
             'queue' => "required|integer|min:1",
-            'parent_id' => "integer|min:0",
+            'parent_id' => "required|integer|min:0",
         ];
     }
 
