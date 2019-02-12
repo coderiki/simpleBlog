@@ -1,0 +1,36 @@
+
+body {
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+.list-unstyled li {
+    display: inline-block;
+    margin: 0px;
+    padding: 0 1px;
+    width: 49%;
+}
+
+.card-img-top {
+    max-width: 750px;
+    max-height: 300px;
+}
+
+.post-detail-image {
+    max-width: 900px;
+    max-height: 300px;
+}
+
+.d-flex {
+    width: 50px;
+    height: 50px;
+}
+
+.smallHeading {
+    font-size: 12px;
+}

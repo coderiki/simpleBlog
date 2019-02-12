@@ -1,0 +1,6 @@
+app\Exception\handler içinde  500/400 gibi hata kodları yakalanıp oluşturulan blade sayfalarda
+hatalar gosterilecek.
+
+post silme işlemi yapıldığında ilgili media yı silecek bir method da yazacağız.
+
+post create alanında Transaction oluşturacağız.
