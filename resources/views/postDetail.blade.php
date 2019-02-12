@@ -31,13 +31,12 @@
     @include('mainStructure.tagsShow')
     <hr>
 
+    @include("mainStructure.commentsShow")
+
     @include('components.alertSuccess')
 
     @include("components.alertDanger")
 
     @include("mainStructure.commentsForm")
-
-    @include("mainStructure.commentsShow")
-
 
     @endsection

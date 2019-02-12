@@ -35,8 +35,8 @@ return [
     'list' => 'Listele',
     'addCategory' => 'Kategori ekle',
     'addPost' => 'Makale Ekle',
-    'listCategories' => 'Kategorileri listele',
-    'listPosts' => 'Makaleleri listele',
+    'listCategory' => 'Kategori listesi',
+    'listPost' => 'Makale listesi',
     'title' => 'Başlık',
     'explanation' => 'Açıklama',
     'queue' => 'Sıra',
@@ -46,6 +46,8 @@ return [
     'tag' => 'Etiket',
     'status' => 'Durum',
     'image' => 'Görsel',
-
+    'home' => 'Anasayfa',
+    'parent' => 'Ebeveyn',
+    'transaction' => 'İşlem',
 
 ];

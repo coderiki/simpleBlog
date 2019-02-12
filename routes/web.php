@@ -33,15 +33,17 @@ Route::group([
     function() {
         Route::get('/', 'AdminRouteController@routeHome')->name('.home');
 
-        Route::get('/logout', 'AdminRouteController@routeLogout')->name('.logout');
-
         Route::get('/login', 'AdminRouteController@routeLogin')->name('.login');
+        Route::get('/logout', 'AdminRouteController@routeLogout')->name('.logout');
 
         Route::get('/addCategory', 'AdminRouteController@routeAddCategory')->name('.addCategoryView');
         Route::post('/addCategory', 'CategoryController@createCategory')->name('.addCategoryPost');
+        Route::get('/listCategory', 'AdminRouteController@routeListCategory')->name('.listCategoryView');
+        Route::get('/deleteCategory/{id}', 'CategoryController@destroy')->name('.deleteCategory');
 
         Route::get('/addPost', 'AdminRouteController@routeAddPost')->name('.addPostView');
         Route::post('/addPost', 'PostController@createPost')->name('.addPostPost');
+
 
     }
 );

@@ -10,13 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link" href="{{ route('home') }}">
+                        {{ __('general.home') }}
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin.home') }}">Admin Panel</a>
-                </li>
+                @if(Auth::check())
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin.home') }}">Admin Panel</a>
+                    </li>
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
                 </li>

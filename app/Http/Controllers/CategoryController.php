@@ -40,6 +40,11 @@ class CategoryController extends Controller
         return view('categoryPosts', compact("blogPosts", "categoryInfo"));
     }
 
+    public function destroy($id)
+    {
+        $this->categoryContract->destroy($id);
+        return back();
+    }
 
 }
 

@@ -89,6 +89,12 @@ class PostController extends Controller
 
         return view('tagPosts', compact("blogPosts"));
     }
+
+    public function destroy($id)
+    {
+        $this->postContract->destroy($id);
+        return back();
+    }
 }
 
 /*

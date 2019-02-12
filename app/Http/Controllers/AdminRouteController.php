@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Contracts\CategoryContract;
 use App\Contracts\PostContract;
 use Illuminate\Http\Request;
@@ -43,6 +44,12 @@ class AdminRouteController extends Controller
     public function routeAddPost()
     {
         return view('admin.addPost');
+    }
+
+    public function routeListCategory()
+    {
+        $categories = Category::all();
+        return view('admin.listCategory', compact('categories'));
     }
 
 }

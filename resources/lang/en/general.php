@@ -41,8 +41,8 @@ return [
     'list' => 'List',
     'addCategory' => 'Add category',
     'addPost' => 'Add post',
-    'listCategories' => 'List category',
-    'listPosts' => 'List post',
+    'listCategory' => 'List category',
+    'listPost' => 'List post',
     'title' => 'Title',
     'explanation' => 'Explanation',
     'queue' => 'Queue',
@@ -52,6 +52,9 @@ return [
     'tag' => 'Tag',
     'status' => 'Status',
     'image' => 'Image',
+    'home' => 'Home',
+    'parent' => 'Parent',
+    'transaction' => 'Transaction',
 
 
 ];
