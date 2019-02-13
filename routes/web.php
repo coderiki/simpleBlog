@@ -51,3 +51,17 @@ Route::group([
 
     }
 );
+
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+
+Route::get('/deneme', function ()
+{
+    $image_path = public_path('image\upload\2019\02\12\deneme-amacli-bir-baslik-1549962023.jpg');
+    if(File::exists($image_path)) {
+        File::delete($image_path);
+        echo 'Dosya silindi';
+    } else {
+        echo 'dosya yok';
+    }
+});

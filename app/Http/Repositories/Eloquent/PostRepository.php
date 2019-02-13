@@ -10,6 +10,7 @@ namespace App\Http\Repositories\Eloquent;
 
 
 use App\Contracts\PostContract;
+use App\Http\Repositories\Fluent\ImageRepository;
 use App\Post;
 
 class PostRepository implements PostContract
@@ -19,39 +20,51 @@ class PostRepository implements PostContract
      * @var Post
      */
     private $post;
+    /**
+     * @var ImageRepository
+     */
+    private $imageRepository;
 
-    public function __construct(Post $post)
+    public function __construct(Post $post, ImageRepository $imageRepository)
     {
         $this->post = $post;
+        $this->imageRepository = $imageRepository;
     }
 
     public function store($params)
     {
-        return $this->post->create($params);
         // TODO: Implement store() method.
+        return $this->post->create($params);
     }
 
     public function destroy($id)
     {
-        return $this->post->findOrFail($id)->delete();
         // TODO: Implement destroy() method.
+        $post = $this->post->findOrFail($id);
+        $this->imageRepository->destroy($post->media_path);
+        return $post->delete();
     }
 
     public function update($datas)
     {
-        return $this->post->findOrFail($datas['id'])->update($datas);
         // TODO: Implement update() method.
+        return $this->post->findOrFail($datas['id'])->update($datas);
+    }
+
+    public function storeImageAndReturnImagePath($requestImage, $slug)
+    {
+        return $this->imageRepository->store($requestImage, $slug);
     }
 
     public function showDetailWithSlug($slug)
     {
+        // TODO: Implement post() method.
         return $this->post->where("slug", $slug)
             ->with("user")
             ->with("category")
             ->with('comments')
             ->with('tags')
             ->firstOrFail();
-        // TODO: Implement post() method.
     }
 
     public function listCategoryPosts($categoryId)
@@ -85,7 +98,7 @@ class PostRepository implements PostContract
 
     public function createTag($tags, $postid)
     {
-        return $this->post->findOrFail($postid)->tag($tags["tag"]);
         // TODO: Implement post() method.
+        return $this->post->findOrFail($postid)->tag($tags["tag"]);
     }
 }

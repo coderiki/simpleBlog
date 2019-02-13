@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Contracts\CategoryContract;
 use App\Contracts\PostContract;
+use App\Http\Repositories\Eloquent\CategoryRepository;
+use App\Http\Repositories\Eloquent\PostRepository;
 use App\Http\Requests\CategoryRequest;
 use phpDocumentor\Reflection\DocBlock\Tags\Return_;
 use Illuminate\Http\Request;
@@ -13,64 +15,45 @@ class CategoryController extends Controller
 {
 
     /**
-     * @var CategoryContract
+     * @var CategoryRepository
      */
-    private $categoryContract;
-    private $postContract;
+    private $categoryRepository;
+    /**
+     * @var PostRepository
+     */
+    private $postRepository;
 
-    public function __construct(CategoryContract $categoryContract, PostContract $postContract)
+    public function __construct(CategoryRepository $categoryRepository, PostRepository $postRepository)
     {
-        $this->categoryContract = $categoryContract;
-        $this->postContract = $postContract;
+        $this->categoryRepository = $categoryRepository;
+        $this->postRepository = $postRepository;
     }
 
     public function createCategory(CategoryRequest $request)
     {
-        $categorySave = $this->categoryContract->store($request->all());
+        $categorySave = $this->categoryRepository->store($request->all());
 
         return redirect()->route('category', ['categorySlug' => $categorySave->slug]);
     }
 
     public function categoryPosts($categorySlug)
     {
-        $categoryInfo = $this->categoryContract->getCategoryInfoWithSlug($categorySlug);
+        $categoryInfo = $this->categoryRepository->getCategoryInfoWithSlug($categorySlug);
 
-        $blogPosts = $this->postContract->listCategoryPosts($categoryInfo->id);
+        $blogPosts = $this->postRepository->listCategoryPosts($categoryInfo->id);
 
         return view('categoryPosts', compact("blogPosts", "categoryInfo"));
     }
 
     public function destroy($id)
     {
-        $this->categoryContract->destroy($id);
+        $this->categoryRepository->destroy($id);
         return back();
     }
 
     public function update(CategoryRequest $request, $id)
     {
-        $this->categoryContract->update($request->toArray(), $id);
+        $this->categoryRepository->update($request->toArray(), $id);
         return redirect()->route('admin.listCategoryView');
     }
 }
-
-/*
-Basit bir kategori ekleme alanı - blade ile
-    {!! Form::open(['route' => "deneme2", 'method' => 'post']) !!}
-        {!! Form::text('title', 'title', ['tagName'=> 'tagValue']) !!}
-        {!! Form::text('comment', 'comment', ['tagName'=> 'tagValue']) !!}
-        {!! Form::number('queue', 'queue', ['class'=> 'deneme']) !!}
-        {!! Form::number('parent_id', 'parent_id', ['class'=> 'deneme']) !!}
-    {!! Form::submit('Gönder', ['class' => 'form-control btn-primary rounded-bottom']) !!}
-    {!! Form::close() !!}
-
-
-    @if(count($errors) > 0)
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>
-                    {{ $error }}
-                </li>
-            @endforeach
-        </ul>
-    @endif
- */

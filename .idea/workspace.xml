@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0fac23c-f175-4b8c-bf40-878dc8de2833" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Contracts/ImageContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/editPost.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/listPost.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminRouteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminRouteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PostRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PostRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/tr/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/tr/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/mainStructure/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/mainStructure/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/upload/2019/02/07/title-1549560259.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/upload/2019/02/08/bir-baslik-olsun-buda-1549653881.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/upload/2019/02/12/deneme-amacli-bir-baslik-1549962023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/upload/2019/02/12/ssdsdfsdf-1549962419.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/upload/2019/02/13/benzersiz-tag-i-olacak-1550067485.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/image/upload/2019/02/13/deneme-iste-1550069460.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +65,7 @@
     <session id="-1775660764">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
@@ -76,11 +76,12 @@
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.27" value="4" />
           <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.30" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -93,7 +94,7 @@
           <entry key="json" value="2" />
           <entry key="media" value="1" />
           <entry key="medias" value="1" />
-          <entry key="php" value="523" />
+          <entry key="php" value="529" />
           <entry key="posts" value="1" />
           <entry key="sql" value="1" />
           <entry key="txt" value="3" />
@@ -108,7 +109,7 @@
           <entry key="Hoi4 file" value="3" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="PHP" value="372" />
+          <entry key="PHP" value="378" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="1" />
           <entry key="composer.json" value="1" />
@@ -119,7 +120,7 @@
           <entry key="css" value="94" />
           <entry key="dummy" value="16" />
           <entry key="env" value="14" />
-          <entry key="php" value="27124" />
+          <entry key="php" value="27568" />
           <entry key="txt" value="245" />
         </counts>
       </usages-collector>
@@ -129,54 +130,20 @@
           <entry key="Blade" value="9110" />
           <entry key="CSS" value="94" />
           <entry key="Hoi4 file" value="234" />
-          <entry key="PHP" value="18014" />
+          <entry key="PHP" value="18458" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="8" />
+          <entry key="PHP Class.type" value="9" />
           <entry key="PHP Interface.type" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Contracts/ImageContract.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-              <folding>
-                <element signature="e#130#162#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#40#71#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -197,7 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" />
         <option value="$PROJECT_DIR$/resources/views/mainStructure/commentsForm.blade.php" />
         <option value="$PROJECT_DIR$/app/Post.php" />
         <option value="$PROJECT_DIR$/public/css/app.css" />
@@ -235,19 +201,20 @@
         <option value="$PROJECT_DIR$/app/Contracts/CategoryContract.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/listCategory.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/editCategory.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" />
         <option value="$PROJECT_DIR$/app/Http/Repositories/Eloquent/CategoryRepository.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/general.php" />
         <option value="$PROJECT_DIR$/resources/lang/tr/general.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/editPost.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/mainStructure/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminRouteController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/listPost.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PostRepository.php" />
         <option value="$PROJECT_DIR$/app/Contracts/ImageContract.php" />
+        <option value="$PROJECT_DIR$/app/Http/Repositories/Eloquent/ImageRepository.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PostRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" />
       </list>
     </option>
   </component>
@@ -397,7 +364,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -427,6 +393,13 @@
               <item name="simpleBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Repositories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -449,6 +422,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -516,17 +490,17 @@
       <workItem from="1549906692487" duration="3543000" />
       <workItem from="1549950187159" duration="18471000" />
       <workItem from="1550041430183" duration="10666000" />
+      <workItem from="1550075519897" duration="3477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152586000" />
+    <option name="totallyTimeSpent" value="156063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18835099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -549,7 +523,7 @@
       <window_info anchor="right" id="Database" order="3" weight="0.16490166" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19515885" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -564,12 +538,12 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" weight="0.2782324" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" weight="0.47135842" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.2782324" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.14372164" />
+      <window_info anchor="right" id="Database" order="3" weight="0.16490166" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,13 +553,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3449">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -741,9 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="2" selection-start-line="7" selection-end-line="97" selection-end-column="6" />
-          <folding>
-            <element signature="e#118#4951#0#HTML" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -768,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
@@ -786,9 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-          <folding>
-            <element signature="e#122#9431#0#HTML" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,9 +764,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="e#40#75#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,16 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="444">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#40#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
@@ -868,18 +809,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Eloquent/PostRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.blade.php" />
+    <entry file="file://$PROJECT_DIR$/app/Contracts/PostContract.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-381">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Eloquent/ImageRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Contracts/ImageContract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Fluent/PostRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="55" column="36" selection-start-line="55" selection-end-line="56" />
+          <folding>
+            <element signature="e#2270#2309#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+          <folding>
+            <element signature="e#40#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Contracts/CategoryContract.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -888,34 +861,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Contracts/PostContract.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="-97">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Contracts/ImageContract.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Eloquent/PostRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#40#71#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1581">
+          <caret line="100" column="41" selection-start-line="100" selection-start-column="41" selection-end-line="100" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        <state relative-caret-position="67">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#130#162#0#PHP" expanded="true" />
           </folding>

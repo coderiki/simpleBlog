@@ -11,6 +11,8 @@ namespace App\Http\Repositories\Fluent;
 
 use App\Contracts\ImageContract;
 use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\File;
+
 
 class ImageRepository implements ImageContract
 {
@@ -38,6 +40,14 @@ class ImageRepository implements ImageContract
     public function destroy($mediaPath)
     {
         // TODO: Implement destroy() method.
+        $image_path = public_path($mediaPath);
+
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function update()
