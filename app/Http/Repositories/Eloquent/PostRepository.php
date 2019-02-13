@@ -90,7 +90,6 @@ class PostRepository implements PostContract
     public function listTagPosts($tagSlug)
     {
         $blogPostsIds = $this->getTagPostIds($tagSlug);
-
         return $this->post->with("user")
             ->whereIn('id', $blogPostsIds)
             ->where("status", ">", 0)
@@ -102,8 +101,7 @@ class PostRepository implements PostContract
     protected function getTagPostIds($tagSlug)
     {
         $tag = Tag::findByName($tagSlug);
-        if ($tag)
-        {
+        if ($tag) {
             return $tag->posts->pluck('id');
         }
         return abort(404);
