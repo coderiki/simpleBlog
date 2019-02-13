@@ -52,4 +52,10 @@ class AdminRouteController extends Controller
         return view('admin.listCategory', compact('categories'));
     }
 
+    public function routeEditCategory($id)
+    {
+        $category = Category::findOrFail($id);
+        return view('admin.editCategory', compact('category'));
+    }
+
 }

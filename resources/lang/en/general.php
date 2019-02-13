@@ -55,6 +55,7 @@ return [
     'home' => 'Home',
     'parent' => 'Parent',
     'transaction' => 'Transaction',
-
+    'editCategory' => 'Edit category',
+    'update' => 'Update',
 
 ];

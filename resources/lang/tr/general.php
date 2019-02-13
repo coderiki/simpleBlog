@@ -49,5 +49,6 @@ return [
     'home' => 'Anasayfa',
     'parent' => 'Ebeveyn',
     'transaction' => 'İşlem',
-
+    'editCategory' => 'Kategori düzenle',
+    'update' => 'Güncelle',
 ];

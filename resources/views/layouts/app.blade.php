@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="page-top">
 
 @include("mainStructure.header")
 
@@ -41,6 +41,8 @@
 <!-- /.container -->
 
 @include("mainStructure.footer")
+
+@include('mainStructure.additional')
 
 <!-- Bootstrap core JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

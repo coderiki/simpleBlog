@@ -40,6 +40,8 @@ Route::group([
         Route::post('/addCategory', 'CategoryController@createCategory')->name('.addCategoryPost');
         Route::get('/listCategory', 'AdminRouteController@routeListCategory')->name('.listCategoryView');
         Route::get('/deleteCategory/{id}', 'CategoryController@destroy')->name('.deleteCategory');
+        Route::get('/editCategory/{id}', 'AdminRouteController@routeEditCategory')->name('.editCategoryView');
+        Route::post('/editCategory/{id}', 'CategoryController@update')->name('.editCategoryPost');
 
         Route::get('/addPost', 'AdminRouteController@routeAddPost')->name('.addPostView');
         Route::post('/addPost', 'PostController@createPost')->name('.addPostPost');

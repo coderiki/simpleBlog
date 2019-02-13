@@ -17,6 +17,8 @@
 @show
 @stack('styles')
 
+<body id="page-top">
+
 @include('admin.mainStructure.navbar')
 
 <!-- wrapper start -->

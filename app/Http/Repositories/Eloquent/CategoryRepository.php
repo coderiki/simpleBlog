@@ -37,9 +37,11 @@ class CategoryRepository implements CategoryContract
         // TODO: Implement destroy() method.
     }
 
-    public function update($datas)
+    public function update($datas, $id)
     {
-        return $this->category->findOrFail($datas['id'])->update($datas);
+        $category = $this->category->findOrFail($id);
+        $category->slug = null;
+        return $category->update($datas);
         // TODO: Implement update() method.
     }
 

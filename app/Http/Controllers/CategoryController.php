@@ -46,6 +46,11 @@ class CategoryController extends Controller
         return back();
     }
 
+    public function update(CategoryRequest $request, $id)
+    {
+        $this->categoryContract->update($request->toArray(), $id);
+        return redirect()->route('admin.listCategoryView');
+    }
 }
 
 /*

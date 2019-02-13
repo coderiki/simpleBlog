@@ -54,7 +54,7 @@
                                 <a href="{{ route('admin.deleteCategory', ['id' => $category->id]) }}" class="float-left">
                                     <i class="fa fa-times text-danger"></i>
                                 </a>
-                                <a href="#" class="float-right">
+                                <a href="{{ route('admin.editCategoryView', ['id' => $category->id]) }}" class="float-right">
                                     <i class="fa fa-edit text-primary"></i>
                                 </a>
                             </td>

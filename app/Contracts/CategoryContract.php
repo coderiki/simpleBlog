@@ -16,6 +16,6 @@ interface CategoryContract
 
     public function destroy($id);
 
-    public function update($datas);
+    public function update($datas, $id);
 
 }
