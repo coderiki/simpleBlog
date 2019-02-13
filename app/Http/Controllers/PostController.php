@@ -2,16 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Contracts\PostContract;
 use App\Http\Repositories\Eloquent\PostRepository;
-use App\Http\Repositories\Fluent\ImageRepository;
 use App\Http\Requests\PostRequest;
-use App\Post;
-use Carbon\Carbon;
-use Cviebrock\EloquentTaggable\Models\Tag;
-use function GuzzleHttp\Psr7\str;
-use Illuminate\Http\Request;
-use Intervention\Image\ImageManagerStatic as Image;
 
 class PostController extends Controller
 {
@@ -58,9 +50,7 @@ class PostController extends Controller
 
     public function routeTagPostList($tagSlug)
     {
-        $tagPostIds = Tag::findByName($tagSlug)->posts->pluck('id');
-
-        $blogPosts = $this->postRepository->listTagPosts($tagPostIds);
+        $blogPosts = $this->postRepository->listTagPosts($tagSlug);
 
         return view('tagPosts', compact("blogPosts"));
     }

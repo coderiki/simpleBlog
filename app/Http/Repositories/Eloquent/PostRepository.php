@@ -12,6 +12,7 @@ namespace App\Http\Repositories\Eloquent;
 use App\Contracts\PostContract;
 use App\Http\Repositories\Fluent\ImageRepository;
 use App\Post;
+use Cviebrock\EloquentTaggable\Models\Tag;
 
 class PostRepository implements PostContract
 {
@@ -86,14 +87,26 @@ class PostRepository implements PostContract
             ->paginate(config("app.paginateCount.postInHomePaginate"));
     }
 
-    public function listTagPosts($blogPostsIds)
+    public function listTagPosts($tagSlug)
     {
+        $blogPostsIds = $this->getTagPostIds($tagSlug);
+
         return $this->post->with("user")
             ->whereIn('id', $blogPostsIds)
             ->where("status", ">", 0)
             ->where("publication_time", "<=", date("Y-m-d H:i:s"))
             ->orderBy("publication_time", "desc")
             ->paginate(config("app.paginateCount.tagPostsPaginate"));
+    }
+
+    protected function getTagPostIds($tagSlug)
+    {
+        $tag = Tag::findByName($tagSlug);
+        if ($tag)
+        {
+            return $tag->posts->pluck('id');
+        }
+        return abort(404);
     }
 
     public function createTag($tags, $postid)
