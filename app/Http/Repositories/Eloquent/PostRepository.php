@@ -33,7 +33,7 @@ class PostRepository implements PostContract
 
     public function destroy($id)
     {
-        return $this->post->findOrdFail($id)->delete();
+        return $this->post->findOrFail($id)->delete();
         // TODO: Implement destroy() method.
     }
 

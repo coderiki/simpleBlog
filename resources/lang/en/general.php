@@ -57,5 +57,6 @@ return [
     'transaction' => 'Transaction',
     'editCategory' => 'Edit category',
     'update' => 'Update',
+    'editPost' => 'Edit post',
 
 ];

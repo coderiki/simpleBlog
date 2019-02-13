@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contracts\PostContract;
+use App\Http\Repositories\Fluent\ImageRepository;
 use App\Http\Requests\PostRequest;
 use App\Post;
 use Carbon\Carbon;
@@ -17,42 +18,23 @@ class PostController extends Controller
      * @var PostContract
      */
     private $postContract;
+    /**
+     * @var ImageRepository
+     */
+    private $imageRepository;
 
-    public function __construct(PostContract $postContract)
+    public function __construct(PostContract $postContract, ImageRepository $imageRepository)
     {
         $this->postContract = $postContract;
         /*
          * PostController yüklenirken tanımladığımız PostContract yani interface yüklensin diyoruz.
          */
-    }
-
-    protected function uploadImage($request, $slug)
-    {
-        $image = $request["image"];
-
-        $filename = $slug."-".time().".".$image->getClientOriginalExtension();
-
-        $ds = DIRECTORY_SEPARATOR;
-        $folderPath = "image" . $ds . "upload" . $ds . date("Y") . $ds . date("m") . $ds . date("d") . $ds;
-        $savePath = public_path($folderPath);
-
-        if (!file_exists($savePath)) {
-            mkdir($savePath, 666, true);
-        }
-
-        Image::make($image->getRealPath())->resize(750, 300, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($savePath . $filename);
-
-        return $folderPath . $filename;
+        $this->imageRepository = $imageRepository;
     }
 
     public function createPost(PostRequest $request)
     {
-        $imagePath = $this->uploadImage(
-            $request->only("image"),
-            str_slug($request->get("title"))
-            );
+        $imagePath = $this->imageRepository->store($request->only("image"), str_slug($request->get("title")));
 
         $request->request->add(["media_path" => $imagePath]);
 
@@ -92,8 +74,9 @@ class PostController extends Controller
 
     public function destroy($id)
     {
-        $this->postContract->destroy($id);
-        return back();
+        $postDelete = $this->postContract->destroy($id);
+        // İmage silen method çağrılacak ve image silinecek.
+        return redirect()->route('admin.listPostView');
     }
 }
 

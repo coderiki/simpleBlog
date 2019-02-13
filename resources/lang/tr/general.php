@@ -51,4 +51,6 @@ return [
     'transaction' => 'İşlem',
     'editCategory' => 'Kategori düzenle',
     'update' => 'Güncelle',
+    'editPost' => 'Makale düzenle',
+
 ];

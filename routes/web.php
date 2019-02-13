@@ -45,6 +45,8 @@ Route::group([
 
         Route::get('/addPost', 'AdminRouteController@routeAddPost')->name('.addPostView');
         Route::post('/addPost', 'PostController@createPost')->name('.addPostPost');
+        Route::get('/listPost', 'AdminRouteController@routeListPost')->name('.listPostView');
+        Route::get('/deletePost/{id}', 'PostController@destroy')->name('.deletePost');
 
 
     }

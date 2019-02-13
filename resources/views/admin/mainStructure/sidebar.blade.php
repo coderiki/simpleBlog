@@ -24,9 +24,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="{{ route('admin.addPostView') }}">{{ __('general.add') }}</a>
-            <a class="dropdown-item" href="#">{{ __('general.list') }}</a>
+            <a class="dropdown-item" href="{{ route('admin.listPostView') }}">{{ __('general.list') }}</a>
         </div>
     </li>
-    
+
 </ul>
 <!-- Sidebar finish -->

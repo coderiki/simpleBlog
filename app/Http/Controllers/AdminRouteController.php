@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Contracts\CategoryContract;
 use App\Contracts\PostContract;
+use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -56,6 +57,12 @@ class AdminRouteController extends Controller
     {
         $category = Category::findOrFail($id);
         return view('admin.editCategory', compact('category'));
+    }
+
+    public function routeListPost()
+    {
+        $posts = Post::all();
+        return view('admin.listPost', compact('posts'));
     }
 
 }
