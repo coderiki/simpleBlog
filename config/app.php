@@ -244,4 +244,10 @@ return [
         'postInHomePaginate' => 1,
         'tagPostsPaginate' => 1,
     ],
+
+    'defaultSettings' => [
+        'defaultPostImage' => 'image\web\no-image-min.png',
+    ],
+
+
 ];

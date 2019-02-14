@@ -58,7 +58,7 @@
                                 <a href="{{ route('admin.deletePost', ['id' => $post->id]) }}" class="float-left">
                                     <i class="fa fa-times text-danger"></i>
                                 </a>
-                                <a href="{{ route('admin.editCategoryView', ['id' => $post->id]) }}" class="float-right">
+                                <a href="{{ route('admin.editPostView', ['id' => $post->id]) }}" class="float-right">
                                     <i class="fa fa-edit text-primary"></i>
                                 </a>
                             </td>

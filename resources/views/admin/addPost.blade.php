@@ -144,7 +144,7 @@
                                 <label for="image"
                                        class="col-md-4 col-form-label text-md-right">{{ __('general.image') }}</label>
                                 <div class="col-md-6">
-                                    <input class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image" type="file" id="image" accept="image/x-png,image/gif,image/jpeg" required>
+                                    <input class="form-control{{ $errors->has('image') ? ' is-invalid' : '' }}" name="image" type="file" id="image" accept="image/x-png,image/gif,image/jpeg">
                                     @if ($errors->has('image'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('image') }}</strong>

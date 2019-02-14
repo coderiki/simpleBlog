@@ -20,6 +20,6 @@ interface PostContract
 
     public function destroy($id);
 
-    public function update($datas);
+    public function update($id, $datas, $deleteFile = null);
 
 }

@@ -65,4 +65,11 @@ class AdminRouteController extends Controller
         return view('admin.listPost', compact('posts'));
     }
 
+    public function routeEditPost($id)
+    {
+        $post = Post::findOrFail($id);
+        $tagList = $post->tagList;
+        return view('admin.editPost', compact('post', 'tagList'));
+    }
+
 }

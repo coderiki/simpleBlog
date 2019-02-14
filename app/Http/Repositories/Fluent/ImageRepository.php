@@ -40,6 +40,9 @@ class ImageRepository implements ImageContract
     public function destroy($mediaPath)
     {
         // TODO: Implement destroy() method.
+        if ($mediaPath == config('app.defaultSettings.defaultPostImage') ) {
+            return false;
+        }
         $image_path = public_path($mediaPath);
 
         if(File::exists($image_path)) {

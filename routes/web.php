@@ -44,24 +44,19 @@ Route::group([
         Route::post('/editCategory/{id}', 'CategoryController@update')->name('.editCategoryPost');
 
         Route::get('/addPost', 'AdminRouteController@routeAddPost')->name('.addPostView');
-        Route::post('/addPost', 'PostController@createPost')->name('.addPostPost');
+        Route::post('/addPost', 'PostController@store')->name('.addPostPost');
         Route::get('/listPost', 'AdminRouteController@routeListPost')->name('.listPostView');
         Route::get('/deletePost/{id}', 'PostController@destroy')->name('.deletePost');
+        Route::get('/editPost/{id}', 'AdminRouteController@routeEditPost')->name('.editPostView');
+        Route::post('/editPost/{id}', 'PostController@update')->name('.editPostPost');
 
 
     }
 );
 
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\File;
+use Carbon\Carbon;
 
 Route::get('/deneme', function ()
 {
-    $image_path = public_path('image\upload\2019\02\12\deneme-amacli-bir-baslik-1549962023.jpg');
-    if(File::exists($image_path)) {
-        File::delete($image_path);
-        echo 'Dosya silindi';
-    } else {
-        echo 'dosya yok';
-    }
+    dump(Carbon::now()->subMinutes(20));
 });

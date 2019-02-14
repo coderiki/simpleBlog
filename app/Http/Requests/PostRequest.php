@@ -32,7 +32,7 @@ class PostRequest extends FormRequest
             "user_id" => "required|integer|min:1",
             "status" => "required|integer|min:0|max:1",
             "publication_time" => "required|date",
-            "image" => "required|image|mimes:jpeg,jpg,png|max:1024", // max 1mb
+            "image" => "image|mimes:jpeg,jpg,png|max:1024", // max 1mb
             "tag" => "max:1000"
         ];
     }

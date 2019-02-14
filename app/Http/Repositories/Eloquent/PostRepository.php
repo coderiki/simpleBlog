@@ -46,10 +46,15 @@ class PostRepository implements PostContract
         return $post->delete();
     }
 
-    public function update($datas)
+    public function update($id, $datas, $deleteFile = null)
     {
         // TODO: Implement update() method.
-        return $this->post->findOrFail($datas['id'])->update($datas);
+        if ($deleteFile) {
+            $this->imageRepository->destroy($deleteFile);
+        }
+        $post = $this->post->findOrFail($id);
+        $post->slug = null;
+        return $post->update($datas);
     }
 
     public function storeImageAndReturnImagePath($requestImage, $slug)
