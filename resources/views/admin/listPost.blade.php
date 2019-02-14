@@ -55,11 +55,14 @@
                             <td>{{ $post->status }}</td>
                             <td>{{ $post->publication_time }}</td>
                             <td>
-                                <a href="{{ route('admin.deletePost', ['id' => $post->id]) }}" class="float-left">
-                                    <i class="fa fa-times text-danger"></i>
+                                <a href="{{ route('admin.deletePost', ['id' => $post->id]) }}" class="badge badge-danger">
+                                    <i class="fa fa-times text-white"></i> {{ __('general.delete') }}
                                 </a>
-                                <a href="{{ route('admin.editPostView', ['id' => $post->id]) }}" class="float-right">
-                                    <i class="fa fa-edit text-primary"></i>
+                                <a href="{{ route('postDetail', ['postSlug' => $post->slug]) }}" class="badge badge-info">
+                                    <i class="fa fa-eye text-white"></i> {{ __('general.show') }}
+                                </a>
+                                <a href="{{ route('admin.editPostView', ['id' => $post->id]) }}" class="badge badge-primary">
+                                    <i class="fa fa-edit text-white"></i> {{ __('general.arrangement') }}
                                 </a>
                             </td>
                         </tr>

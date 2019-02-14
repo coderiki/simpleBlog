@@ -58,5 +58,7 @@ return [
     'editCategory' => 'Edit category',
     'update' => 'Update',
     'editPost' => 'Edit post',
+    'show' => 'Show',
+    'arrangement' => 'Arrangement',
 
 ];

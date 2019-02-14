@@ -52,5 +52,7 @@ return [
     'editCategory' => 'Kategori düzenle',
     'update' => 'Güncelle',
     'editPost' => 'Makale düzenle',
+    'show' => 'Görüntüle',
+    'arrangement' => 'Düzenle',
 
 ];
