@@ -56,7 +56,8 @@ class AdminRouteController extends Controller
     public function routeEditCategory($id)
     {
         $category = Category::findOrFail($id);
-        return view('admin.editCategory', compact('category'));
+        $categoryList = Category::where('id', '!=', $id)->get();
+        return view('admin.editCategory', compact('category', 'categoryList'));
     }
 
     public function routeListPost()

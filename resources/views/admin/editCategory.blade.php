@@ -68,7 +68,7 @@
                                 <div class="col-md-6">
                                     <select class="form-control " name="parent_id">
                                         <option value="0"{{ $category->parent_id === 0 ? ' selected' : '' }}>{{ __('general.mainCategory') }}</option>
-                                        @foreach(\App\Category::all() as $item)
+                                        @foreach($categoryList as $item)
                                             <option value="{{ $item->id }}"{{ $item->id == $category->parent_id ? ' selected' : '' }}>{{ $item->title }}</option>
                                         @endforeach
                                     </select>

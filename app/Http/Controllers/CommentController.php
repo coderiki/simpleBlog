@@ -23,7 +23,7 @@ class CommentController extends Controller
     {
         $request->request->add([
             'ip' => $_SERVER['REMOTE_ADDR'],
-            'status' => 1
+            'status' => config('app.defaultSettings.defaultCommentStatus')
         ]);
         $this->commentContract->store($request->all());
         return back()->withSuccess(__('general.transactionSuccessful'));

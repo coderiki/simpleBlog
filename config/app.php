@@ -247,6 +247,7 @@ return [
 
     'defaultSettings' => [
         'defaultPostImage' => 'image\web\no-image-min.png',
+        'defaultCommentStatus' => 0,
     ],
 
 

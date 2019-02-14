@@ -65,6 +65,7 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany('App\Comment', 'post_id', 'id')
+            ->where('status', 1)
             ->orderBy('id', 'desc')
             ->take(100);
     }

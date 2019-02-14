@@ -26,17 +26,21 @@ class CommentRepository implements CommentContract
 
     public function store($datas)
     {
-        return $this->comment->create($datas);
         // TODO: Implement store() method.
+        return $this->comment->create($datas);
     }
 
     public function destroy($id)
     {
         // TODO: Implement destroy() method.
+        $comment = Comment::findOrFail($id);
+        return $comment->delete();
     }
 
-    public function update($datas)
+    public function update($id, $datas)
     {
         // TODO: Implement update() method.
+        $comment = Comment::findOrFail($id);
+        return $comment->update($datas);
     }
 }
