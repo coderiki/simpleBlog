@@ -67,6 +67,6 @@ class Post extends Model
         return $this->hasMany('App\Comment', 'post_id', 'id')
             ->where('status', 1)
             ->orderBy('id', 'desc')
-            ->take(100);
+            ->take(config('app.defaultSettings.commentInPostCount'));
     }
 }

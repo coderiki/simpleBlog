@@ -161,6 +161,13 @@ return [
         'email' => 'E-Mail',
         'ip' => 'Ip',
         'post_id' => 'Post ID',
+        'homeTitle' => 'Home page title',
+        'postInCategoryPaginateCount' => 'Number of articles to show in category',
+        'postInHomePaginateCount' => 'Number of articles to display on Home Page',
+        'PostInTagPaginateCount' => 'Number of articles to display in tag',
+        'commentInPostCount' => 'Number of comments to display in the article',
+        'commentDefaultStatus' => 'Comment default status',
+        'postDefaultImage' => 'Article default image',
     ],
 
 ];

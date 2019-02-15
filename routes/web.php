@@ -50,13 +50,10 @@ Route::group([
         Route::get('/editPost/{id}', 'AdminRouteController@routeEditPost')->name('.editPostView');
         Route::post('/editPost/{id}', 'PostController@update')->name('.editPostPost');
 
-
+        Route::get()->name('.editSettingView');
     }
 );
 
 use Carbon\Carbon;
 
-Route::get('/deneme', function ()
-{
-    dump(Carbon::now()->subMinutes(20));
-});
+Route::get('/deneme', 'SettingController@deneme');
