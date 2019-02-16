@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class SettingRequest extends FormRequest
 {
@@ -13,7 +14,8 @@ class SettingRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;    // site tamamlanınca kaldırılacak
+        return Auth::check();
     }
 
     /**
@@ -24,13 +26,12 @@ class SettingRequest extends FormRequest
     public function rules()
     {
         return [
-            'homeTitle' => 'required|min:5|max:255',
+            'homeTitle' => 'required|min:4|max:255',
             'postInCategoryPaginateCount' => 'required|integer|min:1',
             'postInHomePaginateCount' => 'required|integer|min:1',
-            'PostInTagPaginateCount' => 'required|integer|min:1',
+            'postInTagPaginateCount' => 'required|integer|min:1',
             'commentInPostCount' => 'required|integer|min:1',
             'commentDefaultStatus' => 'required|integer|min:0|max:1',
-            'postDefaultImage' => 'image|mimes:jpeg,jpg,png|max:1024', // max 1mb,
         ];
     }
 }

@@ -10,6 +10,7 @@ namespace App\Http\Repositories\Fluent;
 
 
 use App\Contracts\ImageContract;
+use test\Mockery\ArgumentObjectTypeHint;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Support\Facades\File;
 
@@ -45,12 +46,7 @@ class ImageRepository implements ImageContract
         }
         $image_path = public_path($mediaPath);
 
-        if(File::exists($image_path)) {
-            File::delete($image_path);
-            return true;
-        } else {
-            return false;
-        }
+        return $this->deleteFile($image_path);
     }
 
     public function update()
@@ -73,6 +69,16 @@ class ImageRepository implements ImageContract
     {
         if (!file_exists(public_path($savePath))) {
             mkdir(public_path($savePath), 666, true);
+        }
+    }
+
+    public function deleteFile($image_path)
+    {
+        if(File::exists($image_path)) {
+            File::delete($image_path);
+            return true;
+        } else {
+            return false;
         }
     }
 }

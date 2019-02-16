@@ -51,6 +51,7 @@ Route::group([
         Route::post('/editPost/{id}', 'PostController@update')->name('.editPostPost');
 
         Route::get('/editSetting', 'SettingController@edit')->name('.editSettingView');
+        Route::post('/editSetting', 'SettingController@update')->name('.editSettingPost');
     }
 );
 
