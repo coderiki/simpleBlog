@@ -31,7 +31,8 @@ Route::group([
     'as' => 'admin',    // name
     ],
     function() {
-        Route::get('/', 'AdminRouteController@routeHome')->name('.home');
+        //Route::get('/', 'AdminRouteController@routeHome')->name('.home');
+        Route::get('/', 'AdminRouteController@routeAddPost')->name('.home');
 
         Route::get('/login', 'AdminRouteController@routeLogin')->name('.login');
         Route::get('/logout', 'AdminRouteController@routeLogout')->name('.logout');
