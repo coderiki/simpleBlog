@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Setting;
 
 class SettingSeeder extends Seeder
 {
@@ -11,6 +12,14 @@ class SettingSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Setting::create([
+            'homeTitle' => 'Blog',
+            'postInCategoryPaginateCount' => 10,
+            'postInHomePaginateCount' => 10,
+            'postInTagPaginateCount' => 10,
+            'commentInPostCount' => 10,
+            'commentDefaultStatus' => 0,
+            'postDefaultImage' => 'image/web/no-image-min.png'
+        ]);
     }
 }

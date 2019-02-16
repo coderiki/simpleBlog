@@ -112,6 +112,20 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <label for="postDefaultImage"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('validation.attributes.postDefaultImage') }}</label>
+                                <div class="col-md-6">
+                                    <input class="form-control{{ $errors->has('postDefaultImage') ? ' is-invalid' : '' }}" name="postDefaultImage" type="file" id="postDefaultImage" accept="image/x-png,image/gif,image/jpeg">
+                                    <img class="img-fluid rounded post-detail-image" src="{{ asset($settings->postDefaultImage) }}">
+                                    @if ($errors->has('postDefaultImage'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('postDefaultImage') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <input type="hidden" name="present_image_path" value="{{ $settings->postDefaultImage }}">
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
