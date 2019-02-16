@@ -50,7 +50,7 @@ Route::group([
         Route::get('/editPost/{id}', 'AdminRouteController@routeEditPost')->name('.editPostView');
         Route::post('/editPost/{id}', 'PostController@update')->name('.editPostPost');
 
-        Route::get()->name('.editSettingView');
+        Route::get('/editSetting', 'SettingController@edit')->name('.editSettingView');
     }
 );
 

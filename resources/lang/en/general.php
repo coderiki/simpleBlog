@@ -60,5 +60,7 @@ return [
     'editPost' => 'Edit post',
     'show' => 'Show',
     'arrangement' => 'Arrangement',
+    'active' => 'Active',
+    'passive' => 'Passive',
 
 ];

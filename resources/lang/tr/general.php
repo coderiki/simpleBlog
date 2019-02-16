@@ -54,5 +54,7 @@ return [
     'editPost' => 'Makale düzenle',
     'show' => 'Görüntüle',
     'arrangement' => 'Düzenle',
+    'active' => 'Aktif',
+    'passive' => 'Pasif',
 
 ];

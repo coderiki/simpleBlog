@@ -174,7 +174,7 @@ return [
         'homeTitle' => 'Ana Sayfa Title',
         'postInCategoryPaginateCount' => 'Kategoride gösterilecek makale sayısı',
         'postInHomePaginateCount' => 'Anasayfada gösterilecek makale sayısı',
-        'PostInTagPaginateCount' => 'Tag de gösterilecek makale sayısı',
+        'postInTagPaginateCount' => 'Tag de gösterilecek makale sayısı',
         'commentInPostCount' => 'Makalede gösterilecek yorum sayısı',
         'commentDefaultStatus' => 'Yorum varsayılan durumu',
         'postDefaultImage' => 'Makale varsayılan görseli',
