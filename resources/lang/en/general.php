@@ -33,6 +33,8 @@ return [
     'nameSurname' => 'Name surname',
     'email' => 'E-mail',
     'comment' => 'Comment',
+    'comments' => 'Comments',
+    'listComment' => 'Comments list',
     'transactionSuccessful' => 'Transaction successful',
     'settings' => 'Settings',
     'logout' => 'Logout',
@@ -62,5 +64,8 @@ return [
     'arrangement' => 'Arrangement',
     'active' => 'Active',
     'passive' => 'Passive',
+    'ipAdress' => 'IP adress',
+    'liveOn' => 'Live on',
+    'waitingForApproval' => 'Waiting for approval',
 
 ];

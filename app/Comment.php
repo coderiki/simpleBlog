@@ -8,10 +8,22 @@ class Comment extends Model
 {
     protected $table = "comments";
 
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'email',
+        'ip',
+        'comment',
+        'post_id',
+        'status'
+    ];
 
     public $timestamps = true;
 
+
+    public function post()
+    {
+        return $this->belongsTo('App\Post', 'post_id', 'id');
+    }
 
     public function comments() {
         /*

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Comment;
 use App\Contracts\CategoryContract;
 use App\Contracts\PostContract;
 use App\Post;
@@ -73,4 +74,10 @@ class AdminRouteController extends Controller
         return view('admin.editPost', compact('post', 'tagList'));
     }
 
+    public function routeListComment()
+    {
+        $comments = Comment::with('post')
+            ->get();
+        return view('admin.listComment', compact('comments'));
+    }
 }

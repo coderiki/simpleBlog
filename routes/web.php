@@ -53,5 +53,7 @@ Route::group([
 
         Route::get('/editSetting', 'SettingController@edit')->name('.editSettingView');
         Route::post('/editSetting', 'SettingController@update')->name('.editSettingPost');
+
+        Route::get('/listComment', 'AdminRouteController@routeListComment')->name('.listCommentView');
     }
 );

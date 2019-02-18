@@ -27,6 +27,8 @@ return [
     'nameSurname' => 'Ad soyad',
     'email' => 'E-posta',
     'comment' => 'Yorum',
+    'comments' => 'Yorumlar',
+    'listComment' => 'Yorum listesi',
     'transactionSuccessful' => 'İşlem başarılı.',
     'settings' => 'Ayarlar',
     'logout' => 'Çıkış yap',
@@ -56,5 +58,8 @@ return [
     'arrangement' => 'Düzenle',
     'active' => 'Aktif',
     'passive' => 'Pasif',
+    'ipAdress' => 'IP adresi',
+    'liveOn' => 'Yayınlanıyor',
+    'waitingForApproval' => 'Onay bekliyor',
 
 ];

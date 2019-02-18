@@ -28,11 +28,17 @@
         </div>
     </li>
 
-
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.editSettingView') }}">
             <i class="fa fa-cogs"></i>
             <span>{{ __('general.settings') }}</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.listCommentView') }}">
+            <i class="fa fa-comment"></i>
+            <span>{{ __('general.comments') }}</span>
         </a>
     </li>
 
