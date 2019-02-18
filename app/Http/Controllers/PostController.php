@@ -24,7 +24,7 @@ class PostController extends Controller
         if ($request->has('image')) {
             $imagePath = $this->postRepository->storeImageAndReturnImagePath($request->only("image"), str_slug($request->get("title")));
         } else {
-            $imagePath = config('app.defaultSettings.defaultPostImage');
+            $imagePath = Session::get('settings.0.defaultPostImage', 10);
         }
 
         $request->request->add(["media_path" => $imagePath]);

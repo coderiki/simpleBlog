@@ -37,6 +37,9 @@ class SettingController extends Controller
 
         $this->settingRepository->update(1, $data);
 
+        $settingRequest->session()->forget('settings');
+            // session dan settings sildik ki yeni ayarlar yüklensin.
+
         return redirect()->back()->withSuccess(__('general.transactionSuccessful'));
 
     }

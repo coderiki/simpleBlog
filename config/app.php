@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -236,19 +235,6 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
-    ],
-
-
-    'paginateCount' => [
-        'postInCategoryPaginate' => 1,
-        'postInHomePaginate' => 1,
-        'tagPostsPaginate' => 1,
-    ],
-
-    'defaultSettings' => [
-        'defaultPostImage' => 'image\web\no-image-min.png',
-        'defaultCommentStatus' => 0,
-        'commentInPostCount' => 10,
     ],
 
 

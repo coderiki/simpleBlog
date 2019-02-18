@@ -55,7 +55,3 @@ Route::group([
         Route::post('/editSetting', 'SettingController@update')->name('.editSettingPost');
     }
 );
-
-use Carbon\Carbon;
-
-Route::get('/deneme', 'SettingController@deneme');

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>@yield("title")</title>
+    <title>@yield("title") {{ Session::get('settings.0.homeTitle', 'Blog Title') }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
@@ -17,9 +17,7 @@
     <link href="{{ asset("css/app.css") }}" rel="stylesheet">
 
 </head>
-
 <body id="page-top">
-
 @include("mainStructure.header")
 
 <!-- Page Content -->

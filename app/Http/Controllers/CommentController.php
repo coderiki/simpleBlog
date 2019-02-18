@@ -6,6 +6,7 @@ use App\Contracts\CommentContract;
 use App\Http\Requests\CommentRequest;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CommentController extends Controller
 {
@@ -23,7 +24,7 @@ class CommentController extends Controller
     {
         $request->request->add([
             'ip' => $_SERVER['REMOTE_ADDR'],
-            'status' => config('app.defaultSettings.defaultCommentStatus')
+            'status' => Session::get('settings.0.defaultCommentStatus', 0)
         ]);
         $this->commentContract->store($request->all());
         return back()->withSuccess(__('general.transactionSuccessful'));

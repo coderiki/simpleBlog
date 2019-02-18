@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentTaggable\Taggable;
+use Illuminate\Support\Facades\Session;
 
 class Post extends Model
 {
@@ -67,6 +68,6 @@ class Post extends Model
         return $this->hasMany('App\Comment', 'post_id', 'id')
             ->where('status', 1)
             ->orderBy('id', 'desc')
-            ->take(config('app.defaultSettings.commentInPostCount'));
+            ->take(Session::get('settings.0.commentInPostCount', 10));
     }
 }

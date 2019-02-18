@@ -41,7 +41,7 @@ class ImageRepository implements ImageContract
     public function destroy($mediaPath)
     {
         // TODO: Implement destroy() method.
-        if ($mediaPath == config('app.defaultSettings.defaultPostImage') ) {
+        if ($mediaPath == Session::get('settings.0.defaultPostImage', 'image/web/no-image-min.png') ) {
             return false;
         }
         $image_path = public_path($mediaPath);

@@ -1361,7 +1361,7 @@
       <Position>8</Position>
       <DataType>varchar(191)|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>&apos;imageweb\no-image-min.png&apos;</DefaultExpression>
+      <DefaultExpression>&apos;image/web/no-image-min.png&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="324" parent="269" name="created_at">

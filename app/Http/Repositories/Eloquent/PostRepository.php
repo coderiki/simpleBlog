@@ -13,6 +13,7 @@ use App\Contracts\PostContract;
 use App\Http\Repositories\Fluent\ImageRepository;
 use App\Post;
 use Cviebrock\EloquentTaggable\Models\Tag;
+use Illuminate\Support\Facades\Session;
 
 class PostRepository implements PostContract
 {
@@ -89,7 +90,7 @@ class PostRepository implements PostContract
             ->where("status", ">", 0)
             ->where("publication_time", "<=", date("Y-m-d H:i:s"))
             ->orderBy("publication_time", "desc")
-            ->paginate(config("app.paginateCount.postInHomePaginate"));
+            ->paginate(Session::get('settings.0.postInHomePaginate', 10));
     }
 
     public function listTagPosts($tagSlug)
@@ -100,7 +101,7 @@ class PostRepository implements PostContract
             ->where("status", ">", 0)
             ->where("publication_time", "<=", date("Y-m-d H:i:s"))
             ->orderBy("publication_time", "desc")
-            ->paginate(config("app.paginateCount.tagPostsPaginate"));
+            ->paginate(Session::get('settings.0.tagPostsPaginate', 10));
     }
 
     protected function getTagPostIds($tagSlug)
