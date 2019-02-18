@@ -3,4 +3,11 @@ hatalar gosterilecek.
 
 post create alanında Transaction oluşturacağız.
 
-Admin panelinden Comments alanını yapacağız.
+Sayfa kısımları nı yapacağız.
+
+Side Widget alanında duyuru vs gibi alan yapabiliriz.
+
+Logo ekleme alanı admin paneli settings kısmında olacak.
+
+List kısımlarında tüm veriler çekilip js datatable ile listeleniyor. Çok
+fazla veri olunca sıkıntı olabilir. Paginate kısmını backend kısmında yaptıracağız.
