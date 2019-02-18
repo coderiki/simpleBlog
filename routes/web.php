@@ -55,5 +55,8 @@ Route::group([
         Route::post('/editSetting', 'SettingController@update')->name('.editSettingPost');
 
         Route::get('/listComment', 'AdminRouteController@routeListComment')->name('.listCommentView');
+        Route::get('/commentLiveIn/{id}', 'CommentController@liveIn')->name('.editCommentStatusIn');
+        Route::get('/commentLiveOut/{id}', 'CommentController@liveOut')->name('.editCommentStatusOut');
+        Route::get('/commentDestroy/{id}', 'CommentController@destroy')->name('.deleteComment');
     }
 );

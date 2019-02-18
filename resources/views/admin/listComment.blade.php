@@ -46,18 +46,29 @@
                             <td> {{ $comment->name }}</td>
                             <td> {{ $comment->email }}</td>
                             <td> {{ $comment->ip }}</td>
-                            <td> <textarea style="resize: none">{{ $comment->comment }}</textarea> </td>
+                            <td> <textarea style="resize: none" readonly>{{ $comment->comment }}</textarea> </td>
                             <td>
                                 <a href="{{ route('postDetail', ['postSlug' => $comment->post->slug]) }}">
                                     {{ $comment->post->title }}
                                 </a>
                             </td>
                             <td>
-                                <span class="badge {{ $comment->status === 0 ? 'badge-danger' : 'badge-primary' }}">
-                                    {{ $comment->status === 0 ? __('general.waitingForApproval') : __('general.liveOn') }}
-                                </span>
+                                @if($comment->status === 0)
+                                    <a href="{{ route('admin.editCommentStatusIn', ['id' => $comment->id]) }}" class="badge badge-danger">
+                                        {{ __('general.waitingForApproval') }}
+                                    </a>
+                                    @else
+                                    <a href="{{ route('admin.editCommentStatusOut', ['id' => $comment->id]) }}" class="badge badge-primary">
+                                        {{ __('general.liveOn') }}
+                                    </a>
+                                    @endif
                             </td>
-                            <td> işlem</td>
+                            <td>
+                                <a href="{{ route('admin.deleteComment', ['id' => $comment->id]) }}" class="badge badge-danger">
+                                    <i class="fa fa-times text-white"></i>
+                                    {{ __('general.delete') }}
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

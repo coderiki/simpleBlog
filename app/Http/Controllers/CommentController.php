@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Contracts\CommentContract;
+use App\Http\Repositories\Eloquent\CommentRepository;
 use App\Http\Requests\CommentRequest;
 use App\Post;
 use Illuminate\Http\Request;
@@ -11,13 +12,13 @@ use Illuminate\Support\Facades\Session;
 class CommentController extends Controller
 {
     /**
-     * @var CommentContract
+     * @var CommentRepository
      */
-    private $commentContract;
+    private $commentRepository;
 
-    public function __construct(CommentContract $commentContract)
+    public function __construct(CommentRepository $commentRepository)
     {
-        $this->commentContract = $commentContract;
+        $this->commentRepository = $commentRepository;
     }
 
     public function store(CommentRequest $request)
@@ -26,7 +27,27 @@ class CommentController extends Controller
             'ip' => $_SERVER['REMOTE_ADDR'],
             'status' => Session::get('settings.0.defaultCommentStatus', 0)
         ]);
-        $this->commentContract->store($request->all());
-        return back()->withSuccess(__('general.transactionSuccessful'));
+        $this->commentRepository->store($request->all());
+        return $this->backWithSuccess();
+    }
+
+    public function destroy($id)
+    {
+        $this->commentRepository->destroy($id);
+        return $this->backWithSuccess();
+    }
+
+    public function liveIn($id)
+    {
+        $data = ['status' => 1];
+        $this->commentRepository->update($id, $data);
+        return $this->backWithSuccess();
+    }
+
+    public function liveOut($id)
+    {
+        $data = ['status' => 0];
+        $this->commentRepository->update($id, $data);
+        return $this->backWithSuccess();
     }
 }
