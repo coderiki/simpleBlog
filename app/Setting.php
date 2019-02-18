@@ -15,6 +15,7 @@ class Setting extends Model
         'PostInTagPaginateCount',
         'commentInPostCount',
         'commentDefaultStatus',
+        'commentabilityStatus',
         'postDefaultImage',
     ];
 

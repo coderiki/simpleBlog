@@ -32,6 +32,7 @@ class SettingRequest extends FormRequest
             'postInTagPaginateCount' => 'required|integer|min:1',
             'commentInPostCount' => 'required|integer|min:1',
             'commentDefaultStatus' => 'required|integer|min:0|max:1',
+            'commentabilityStatus' => 'required|integer|min:0|max:1',
         ];
     }
 }

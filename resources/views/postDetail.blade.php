@@ -37,6 +37,8 @@
 
     @include("components.alertDanger")
 
-    @include("mainStructure.commentsForm")
+    @if(Session::get('settings.0.commentabilityStatus') === 1)
+        @include("mainStructure.commentsForm")
+    @endif
 
     @endsection

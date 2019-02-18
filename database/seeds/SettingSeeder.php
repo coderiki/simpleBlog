@@ -19,6 +19,7 @@ class SettingSeeder extends Seeder
             'postInTagPaginateCount' => 10,
             'commentInPostCount' => 10,
             'commentDefaultStatus' => 0,
+            'commentabilityStatus' => 1,
             'postDefaultImage' => 'image/web/no-image-min.png'
         ]);
     }

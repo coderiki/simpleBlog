@@ -115,6 +115,26 @@
                                 </div>
                             </div>
 
+                            <div class="form-group row">
+                                <label for="commentabilityStatus"
+                                       class="col-md-4 col-form-label text-md-right">{{ __('validation.attributes.commentabilityStatus') }}</label>
+                                <div class="col-md-6">
+                                    <select
+                                            id="commentabilityStatus"
+                                            name="commentabilityStatus"
+                                            class="form-control{{ $errors->has('commentabilityStatus') ? ' is-invalid' : '' }}"
+                                            required>
+                                        <option value="0"{{ $settings->commentabilityStatus === 0 ? ' selected' : '' }}>{{ __('general.passive') }}</option>
+                                        <option value="1"{{ $settings->commentabilityStatus === 1 ? ' selected' : '' }}>{{ __('general.active') }}</option>
+                                    </select>
+                                    @if ($errors->has('commentabilityStatus'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('commentabilityStatus') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">

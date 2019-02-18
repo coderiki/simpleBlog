@@ -6,6 +6,7 @@ use App\Http\Repositories\Eloquent\PostRepository;
 use App\Http\Requests\PostRequest;
 use App\Post;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class PostController extends Controller
 {

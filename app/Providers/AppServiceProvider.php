@@ -33,6 +33,7 @@ class AppServiceProvider extends ServiceProvider
                 'tagPostsPaginate' => $settings->postInTagPaginateCount,
                 'commentInPostCount' => $settings->commentInPostCount,
                 'defaultCommentStatus' => $settings->commentDefaultStatus,
+                'commentabilityStatus' => $settings->commentabilityStatus,
                 'defaultPostImage' => $settings->postDefaultImage,
             ]);
         }

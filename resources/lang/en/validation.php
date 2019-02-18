@@ -167,6 +167,7 @@ return [
         'postInTagPaginateCount' => 'Number of articles to display in tag',
         'commentInPostCount' => 'Number of comments to display in the article',
         'commentDefaultStatus' => 'Comment default status',
+        'commentabilityStatus' => 'Commentability status',
         'postDefaultImage' => 'Article default image',
     ],
 

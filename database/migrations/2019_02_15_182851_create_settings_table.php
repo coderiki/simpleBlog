@@ -21,6 +21,7 @@ class CreateSettingsTable extends Migration
             $table->integer('postInTagPaginateCount')->default(10);
             $table->integer('commentInPostCount')->default(10);
             $table->integer('commentDefaultStatus')->default(0)->comment('Eklenen yorum direk yayınlansın istiyorsak 1 olacak');
+            $table->integer('commentabilityStatus')->default(1)->comment('Yorum yapılabilirlik durumu açık olsun istiyorsak 1 olacak');
             $table->string('postDefaultImage')->default('image\/web\/no-image-min.png');
             $table->timestamps();
         });

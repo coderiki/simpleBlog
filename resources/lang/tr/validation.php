@@ -177,6 +177,7 @@ return [
         'postInTagPaginateCount' => 'Tag de gösterilecek makale sayısı',
         'commentInPostCount' => 'Makalede gösterilecek yorum sayısı',
         'commentDefaultStatus' => 'Yorum varsayılan durumu',
+        'commentabilityStatus' => 'Yorum yapılabilirlik durumu',
         'postDefaultImage' => 'Makale varsayılan görseli',
     ],
 
