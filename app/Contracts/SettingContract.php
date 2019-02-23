@@ -11,9 +11,9 @@ namespace App\Contracts;
 
 interface SettingContract
 {
-    public function store($datas);
+    public function store($request);
 
     public function destroy($id);
 
-    public function update($id, $datas);
+    public function update($id, $request);
 }

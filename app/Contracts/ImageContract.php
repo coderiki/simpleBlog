@@ -11,11 +11,9 @@ namespace App\Contracts;
 
 interface ImageContract
 {
-
     public function store($requestImage, $slug);
 
     public function destroy($mediaPath);
 
     public function update();
-
 }

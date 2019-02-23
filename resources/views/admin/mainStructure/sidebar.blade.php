@@ -28,6 +28,17 @@
         </div>
     </li>
 
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-leaf"></i>
+            <span>{{ __('general.page') }}</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="{{ route('admin.addPageView') }}">{{ __('general.add') }}</a>
+            <a class="dropdown-item" href="{{ route('admin.listPageView') }}">{{ __('general.list') }}</a>
+        </div>
+    </li>
+
     <li class="nav-item">
         <a class="nav-link" href="{{ route('admin.editSettingView') }}">
             <i class="fa fa-cogs"></i>
@@ -41,6 +52,7 @@
             <span>{{ __('general.comments') }}</span>
         </a>
     </li>
+
 
 </ul>
 <!-- Sidebar finish -->

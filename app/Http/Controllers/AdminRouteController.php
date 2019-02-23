@@ -80,4 +80,9 @@ class AdminRouteController extends Controller
             ->get();
         return view('admin.listComment', compact('comments'));
     }
+
+    public function routeAddPage()
+    {
+        return view('admin.addPage');
+    }
 }

@@ -11,11 +11,9 @@ namespace App\Contracts;
 
 interface CategoryContract
 {
-
-    public function store($datas);
+    public function store($request);
 
     public function destroy($id);
 
-    public function update($datas, $id);
-
+    public function update($request, $id);
 }

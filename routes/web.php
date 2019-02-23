@@ -25,6 +25,8 @@ Route::get("/post/{postSlug}", "PostController@routePostDetail")->name("postDeta
 
 Route::post('/commentStore', 'CommentController@store')->name('commentStore');
 
+Route::get('/page/{slug}', 'PageController@show')->name('pageDetail');
+
 Route::group([
     'prefix' => '/admin',   // prefix
     'middleware' => ['web'],  // middleware. if you want write array
@@ -58,5 +60,12 @@ Route::group([
         Route::get('/commentLiveIn/{id}', 'CommentController@liveIn')->name('.editCommentStatusIn');
         Route::get('/commentLiveOut/{id}', 'CommentController@liveOut')->name('.editCommentStatusOut');
         Route::get('/commentDestroy/{id}', 'CommentController@destroy')->name('.deleteComment');
+
+        Route::get('/addPage', 'PageController@viewAdd')->name('.addPageView');
+        Route::post('/addPage', 'PageController@store')->name('.addPagePost');
+        Route::get('/listPage', 'PageController@list')->name('.listPageView');
+        Route::get('/deletePage/{id}', 'PageController@destroy')->name('.deletePage');
+        Route::get('/editPage/{id}', 'PageController@edit')->name('.editPageView');
+
     }
 );

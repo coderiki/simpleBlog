@@ -67,5 +67,9 @@ return [
     'ipAdress' => 'IP adress',
     'liveOn' => 'Live on',
     'waitingForApproval' => 'Waiting for approval',
+    'page' => 'Page',
+    'listPages' => 'List pages',
+    'addPage' => 'Add page',
+    'editPage' => 'Edit page',
 
 ];

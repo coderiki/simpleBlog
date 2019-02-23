@@ -61,5 +61,8 @@ return [
     'ipAdress' => 'IP adresi',
     'liveOn' => 'Yayınlanıyor',
     'waitingForApproval' => 'Onay bekliyor',
-
+    'page' => 'Sayfa',
+    'listPages' => 'Sayfaları listele',
+    'addPage' => 'Sayfa ekle',
+    'editPage' => 'Sayfa düzenle',
 ];

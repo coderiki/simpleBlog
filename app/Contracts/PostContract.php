@@ -15,11 +15,9 @@ namespace App\Contracts;
 
 interface PostContract
 {
-
-    public function store($datas);
+    public function store($request);
 
     public function destroy($id);
 
-    public function update($id, $datas, $deleteFile = null);
-
+    public function update($id, $request, $deleteFile = null);
 }
