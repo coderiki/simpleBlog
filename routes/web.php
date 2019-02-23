@@ -66,6 +66,7 @@ Route::group([
         Route::get('/listPage', 'PageController@list')->name('.listPageView');
         Route::get('/deletePage/{id}', 'PageController@destroy')->name('.deletePage');
         Route::get('/editPage/{id}', 'PageController@edit')->name('.editPageView');
+        Route::post('/editPage/{id}', 'PageController@update')->name('.editPagePost');
 
     }
 );

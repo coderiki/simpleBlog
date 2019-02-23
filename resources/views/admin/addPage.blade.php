@@ -1,8 +1,8 @@
 @extends('admin.layouts.app')
 
 @section('title')
-    {{ Session::get('settings.0.addPage') }}
-    @endsection
+    {{ __('general.addPage') }}
+@endsection
 
 @section('content')
     <div class="container">
@@ -36,8 +36,7 @@
                                 <label for="content"
                                        class="col-md-4 col-form-label text-md-right">{{ __('general.content') }}</label>
                                 <div class="col-md-6">
-                                    <textarea style="resize: none"
-                                              class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}"
+                                    <textarea class="form-control{{ $errors->has('content') ? ' is-invalid' : '' }}"
                                               name="content"
                                               required>{{ old('content') }}</textarea>
                                     @if ($errors->has('content'))
@@ -61,4 +60,4 @@
             </div>
         </div>
     </div>
-    @endsection
+@endsection

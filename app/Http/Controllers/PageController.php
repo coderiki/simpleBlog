@@ -56,6 +56,7 @@ class PageController extends Controller
 
     public function edit($id)
     {
-        return 'edit page';
+        $page = $this->pageRepository->getById($id);
+        return view('admin.editPage', compact('page'));
     }
 }

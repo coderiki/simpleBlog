@@ -58,4 +58,10 @@ class PageRepository implements PageContract
         $pageAll = $this->page->all();
         return $pageAll;
     }
+
+    public function getById($id)
+    {
+        $page = $this->page->findOrFail($id);
+        return $page;
+    }
 }

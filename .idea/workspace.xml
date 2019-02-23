@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0fac23c-f175-4b8c-bf40-878dc8de2833" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Contracts/PageContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/addPage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/listPage.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pageDetail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f61453ab-9273-4378-8426-ff788852134d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f61453ab-9273-4378-8426-ff788852134d.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/editPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contracts/CategoryContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contracts/CategoryContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contracts/CommentContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contracts/CommentContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contracts/ImageContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contracts/ImageContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contracts/PostContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contracts/PostContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Contracts/SettingContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Contracts/SettingContract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminRouteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminRouteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/tr/general.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/tr/general.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/mainStructure/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/mainStructure/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mainStructure/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mainStructure/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/addPage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/addPage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +51,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="simpleblog: schema" type="c314c289:MysqlImplModel$Schema" />
         <item name="pages: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="simpleblog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="simpleblog: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="settings: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -158,33 +152,34 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="45" />
+          <entry key="php" value="49" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="11" />
+          <entry key="Blade" value="15" />
           <entry key="Hoi4 file" value="1" />
           <entry key="PHP" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="2531" />
+          <entry key="php" value="2884" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="752" />
-          <entry key="PHP" value="1779" />
+          <entry key="Blade" value="958" />
+          <entry key="PHP" value="1926" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -200,8 +195,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="14" />
+            <state relative-caret-position="1105">
+              <caret line="70" column="11" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -218,8 +213,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="410">
+              <caret line="68" column="83" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -227,8 +222,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PageController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+            <state relative-caret-position="138">
+              <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="e#40#90#0#PHP" expanded="true" />
               </folding>
@@ -239,8 +234,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Eloquent/PageRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="51" column="62" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="62" />
+            <state relative-caret-position="495">
+              <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
               <folding>
                 <element signature="e#132#163#0#PHP" expanded="true" />
               </folding>
@@ -249,10 +244,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pageDetail.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/editPage.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            <state relative-caret-position="249">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -287,7 +282,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Repositories/Eloquent/CommentRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/editCategory.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Repositories/Eloquent/SettingRepository.php" />
@@ -330,14 +324,15 @@
         <option value="$PROJECT_DIR$/app/Contracts/CommentContract.php" />
         <option value="$PROJECT_DIR$/app/Contracts/PostContract.php" />
         <option value="$PROJECT_DIR$/app/Contracts/SettingContract.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/addPage.blade.php" />
         <option value="$PROJECT_DIR$/app/Contracts/PageContract.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/mainStructure/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/listPage.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pageDetail.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Repositories/Eloquent/PageRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PageController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pageDetail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/addPage.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/editPage.blade.php" />
       </list>
     </option>
   </component>
@@ -506,6 +501,13 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="simpleBlog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleBlog" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -595,17 +597,18 @@
       <workItem from="1550502929333" duration="89000" />
       <workItem from="1550599796570" duration="7040000" />
       <workItem from="1550854639118" duration="2184000" />
+      <workItem from="1550949136718" duration="1374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206673000" />
+    <option name="totallyTimeSpent" value="208047000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19969743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -658,13 +661,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Fluent/ImageRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Eloquent/PostRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -940,27 +936,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/addPage.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listCategory.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="70" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/listPage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="45" column="61" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/en/general.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="70" column="11" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="14" />
+        <state relative-caret-position="1105">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/listCategory.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pageDetail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="70" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#3058#0#Blade" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -971,47 +971,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/listPage.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="45" column="61" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="61" />
-          <folding>
-            <element signature="e#1443#1480#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Repositories/Eloquent/PageRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="51" column="62" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="62" />
+        <state relative-caret-position="495">
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
           <folding>
             <element signature="e#132#163#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/addPage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+        <state relative-caret-position="138">
+          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="e#40#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pageDetail.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        <state relative-caret-position="410">
+          <caret line="68" column="83" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/editPage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
         </state>
       </provider>
     </entry>
