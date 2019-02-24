@@ -1,3 +1,6 @@
+<?php
+$pages = \App\Page::all();
+?>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -15,20 +18,18 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+
                 @if(Auth::check())
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin.home') }}">Admin Panel</a>
                     </li>
                 @endif
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
+
+                @foreach($pages as $page)
+                    <li class="nav-item">
+                        <a href="{{ route('pageDetail', ['slug' => $page->slug]) }}" class="nav-link">{{ $page->title }}</a>
+                    </li>
+                    @endforeach
             </ul>
         </div>
     </div>
