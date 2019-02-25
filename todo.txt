@@ -3,8 +3,6 @@ hatalar gosterilecek.
 
 post create alanında Transaction oluşturacağız.
 
-Sayfa kısımları nı yapacağız.
-
 Side Widget alanında duyuru vs gibi alan yapabiliriz.
 
 List kısımlarında tüm veriler çekilip js datatable ile listeleniyor. Çok

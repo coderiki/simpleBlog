@@ -5,3 +5,9 @@
     </div>
     <!-- /.container -->
 </footer>
+
+@if (Request::route()->named('home'))
+    active
+    @else
+    passive
+@endif
